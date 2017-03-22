@@ -8,12 +8,21 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <IndexLink to="/">Home</IndexLink>
-        {' | '}
-        <Link to="/fuel-savings">Demo App</Link>
-        {' | '}
-        <Link to="/about">About</Link>
-        <br/>
+        <div className="ui attached stackable menu">
+            <div className="ui container">
+                <a className="item">
+                <i className="home icon"></i> Home
+                </a>
+                <a className="item">
+                <i className="grid layout icon"></i> Browse
+                </a> 
+                <a className="item">
+                <i className="mail icon"></i> Messages
+                </a>
+                <div className="right item">
+                </div>
+            </div>
+            </div>
         {this.props.children}
       </div>
     );
